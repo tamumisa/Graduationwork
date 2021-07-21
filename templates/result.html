@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゴミぶん</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #EEF6FF;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #ffffff;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            transition: .3s;
+            text-decoration: none;
+            color: #2C72AE;
+        }
+
+        a::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: #4FA0E6;
+            transition: .3s;
+            transform: translateX(-50%);
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        .ruby {
+            padding: 0.5em;
+            /*文字周りの余白*/
+            color: #494949;
+            /*文字色*/
+            border-left: solid 5px #2C72AE;
+            /*左線（実線 太さ 色）*/
+        }
+
+        li {
+            list-style: none;
+            padding: 10px
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ruby>
+            分<rt>ぶん</rt>
+            別<rt>べつ</rt>
+            結<rt>けっ</rt>
+            果<rt>か</rt>
+        </ruby>
+    </header>
+    <h1>{{gomi_label}}です</h1>
+    <ruby>
+        <span>火</span>
+        <rt>か</rt>
+        <span>曜</span>
+        <rt>よう</rt>
+        <span>日</span>
+        <rt>び</rt>
+        <p>に、だしてください。</p>
+    </ruby>
+    <br></br>
+    <ruby class="ruby">
+        各<rt>かく</rt>
+        市<rt>し</rt>
+        町<rt>ちょう</rt>
+        村<rt>そん</rt>
+        <p>の</p>
+    </ruby>
+    <ruby>
+        収<rt>しゅう</rt>
+        集<rt>しゅう</rt>
+        日<rt>び</rt>
+    </ruby>
+    </div>
+    <ul class="link">
+        <li><a href="https://www.city.yokohama.lg.jp/kurashi/sumai-kurashi/gomi-recycle/gomi/shushuyobi/">横浜市</a></li>
+        <li><a href="https://www.city.kawasaki.jp/300/page/0000012570.html">川崎市</a></li>
+    </ul>
+</body>
+
+</html>

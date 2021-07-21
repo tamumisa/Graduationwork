@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ゴミぶん</title>
+  <link rel="stylesheet" href="top.css">
+  <style>
+    body {
+      text-align: center;
+      background-color: #EEF6FF;
+      margin: 0 auto;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #4FA0E6;
+      color: #FFF;
+      width: 160px;
+      padding: 0.8em;
+      text-decoration: none;
+      border-radius: 4px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+      -webkit-tap-highlight-color: transparent;
+      transition: .2s ease-out;
+      border: none;
+    }
+
+    .button:hover {
+      cursor: pointer;
+      text-decoration: none;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 4px 7px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    .image {
+      width: 600px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 300px;
+      text-align: center;
+    }
+
+    .item {
+      margin-right: 10px;
+      list-style: none;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .item:nth-child(1) {
+      -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+      animation: example 0.5s ease 0.5s 1 forwards;
+    }
+
+    .item:nth-child(2) {
+      -webkit-animation: example 0.5s ease 1s 1 forwards;
+      animation: example 0.5s ease 1s 1 forwards;
+    }
+
+    .item:nth-child(3) {
+      -webkit-animation: example 0.5s ease 1.5s 1 forwards;
+      animation: example 0.5s ease 1.5s 1 forwards;
+    }
+
+    @-webkit-keyframes example {
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes example {
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="item"><img src="{{url_for('static', filename='ごみぶん.png')}}" alt="ごみぶん"/></li>
+    <li class="item"><img src="{{url_for('static', filename='ごみぶんロゴ.png')}}" alt="ごみぶんロゴ"/></li>
+    <li class="item">
+      <form action="confirmation.html" method="POST">
+        <input type="submit" value="はじめる" class="button">
+      </form>
+    </li>
+  </ul>
+</body>
+
+</html>
